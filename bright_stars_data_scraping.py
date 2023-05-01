@@ -16,12 +16,10 @@ star_table = soup.find('table')
 
 temp_list= []
 table_rows = star_table.find_all('tr')
-#table_rows = star_table.find_all('t')
-#table_rows = star_table.find_all('tt')
+
 for tr in table_rows:
-    #td = tr.find_all('tt')
-    td = tr.find_all('tr')
-    #td = tr.find_all('td')
+    
+    td = tr.find_all('td')
     row = [i.text.rstrip() for i in td]
     temp_list.append(row)
 
